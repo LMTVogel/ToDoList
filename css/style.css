@@ -1,0 +1,27 @@
+body {
+    background-color: #343a40;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    margin: 10px 0 30px 0;
+}
+
+/* BUTTON STYLING */
+
+.fa-eye {
+    color: white;
+}
+
+.fa-edit {
+    color: white;
+}
+
+.btn-watch {
+    background-color: #2997ff;
+}
+
+.btn {
+    margin-right: 15px;
+}
