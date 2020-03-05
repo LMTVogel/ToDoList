@@ -27,7 +27,7 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Huiswerk</td>
+                    <td>Vakantie</td>
                     <td>
                         <a class="btn btn-danger float-right" href=""><i class="far fa-trash-alt"></i></a>
                         <a class="btn btn-warning float-right" href=""><i class="far fa-edit"></i></a>
