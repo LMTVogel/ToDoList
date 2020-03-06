@@ -22,6 +22,11 @@ body {
     background-color: #2997ff;
 }
 
-.btn {
+.btn-danger, .btn-warning, .btn-watch {
     margin-right: 15px;
+}
+
+.test {
+    position: absolute;
+    left: 50%;
 }

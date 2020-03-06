@@ -36,6 +36,9 @@
                 </tr>
             </tbody>
         </table>
+
+        <a class="btn btn-success test" href="">Lijst toevoegen +</a>
+    
     </div>
 
 </body>
