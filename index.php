@@ -21,7 +21,7 @@
                     <td><?php echo $row['lijst_naam'] ?></td>
                     <td>
                         <a class="btn btn-danger float-right" href="actions/deleteLijst.php?lijst_id=<?php echo $row['lijst_id'] ?>" onclick="return validation()"><i class="far fa-trash-alt"></i></a>
-                        <a class="btn btn-warning float-right" href=""><i class="far fa-edit"></i></a>
+                        <a class="btn btn-warning float-right" href="editLijst.php?lijst_id=<?php echo $row['lijst_id'] ?>"><i class="far fa-edit"></i></a>
                         <a class="btn btn-watch float-right" href=""><i class="far fa-eye"></i></a>
                     </td>
                 </tr>
