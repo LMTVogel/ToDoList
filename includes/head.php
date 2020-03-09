@@ -16,5 +16,15 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/6e218605e4.js" crossorigin="anonymous"></script>
     <title>ToDoList</title>
+    <script>
+        function validation() {
+            if (!confirm("Weet u zeker dat u de lijst en bijbehorende taken wilt verwijderen?")) {
+                return false;
+            } else {
+                alert("De lijst en bijbehorende taken zijn verwijderd.");
+                return true;
+            }
+        }
+    </script>
 </head>
 <body>
