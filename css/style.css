@@ -26,7 +26,8 @@ body {
     margin-right: 15px;
 }
 
-.test {
-    position: absolute;
-    left: 50%;
+/* FORM STYLING */
+
+.form-group {
+    color: white !important;
 }

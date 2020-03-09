@@ -1,45 +1,38 @@
-<?php
-    include "connect.php";
-?>
+<?php include"includes/head.php" ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/6e218605e4.js" crossorigin="anonymous"></script>
-    <title>ToDoList</title>
-</head>
-<body>
-    <h1 class="title">Luuk's To Do List <i style="color: #36e336;" class="far fa-check-square"></i></h1>
-    
-    <div class="container">
-        <table class="table table-dark">
-            <thead>
+<h1 class="title">Luuk's To Do List <i style="color: #36e336;" class="far fa-check-square"></i></h1>
+
+<div class="container">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#ID</th>
+                <th scope="col">Lijstnaam</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                $validate = "1";
+
+                if ($validate == "1") {
+                    foreach ($result as $row) {
+            ?>
                 <tr>
-                    <th scope="col">#ID</th>
-                    <th scope="col">Lijstnaam</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Vakantie</td>
+                    <th scope="row"><?php echo $row['lijst_id'] ?></th>
+                    <td><?php echo $row['lijst_naam'] ?></td>
                     <td>
                         <a class="btn btn-danger float-right" href=""><i class="far fa-trash-alt"></i></a>
                         <a class="btn btn-warning float-right" href=""><i class="far fa-edit"></i></a>
                         <a class="btn btn-watch float-right" href=""><i class="far fa-eye"></i></a>
                     </td>
                 </tr>
-            </tbody>
-        </table>
-
-        <a class="btn btn-success test" href="">Lijst toevoegen +</a>
-    
+            <?php }} ?>
+        </tbody>
+    </table>
+    <div class="text-center">
+        <a class="btn btn-success" href="createLijst.php">Lijst toevoegen +</a>
     </div>
+</div>
 
-</body>
-</html>
+<?php include"includes/footer.php" ?>
