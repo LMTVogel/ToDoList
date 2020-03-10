@@ -4,6 +4,7 @@
     $sql = "SELECT * FROM `lijsten`";
     $query = $conn->prepare($sql);
     $query->execute();
+    
     $result = $query->fetchAll();
 ?>
 
@@ -22,6 +23,15 @@
                 return false;
             } else {
                 alert("De lijst en bijbehorende taken zijn verwijderd.");
+                return true;
+            }
+        }
+
+        function taakValidation() {
+            if (!confirm("Weet u zeker dat u de taak wilt verwijderen?")) {
+                return false;
+            } else {
+                alert("De taak is verwijderd.");
                 return true;
             }
         }
