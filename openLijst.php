@@ -9,14 +9,12 @@
 
     $result = $query->fetch();
 
-    $sql2 = "SELECT * FROM `taken` WHERE lijst_id = :lijst_id";
-    $query2 = $conn->prepare($sql2);
-    $query2->bindParam(":lijst_id", $lijst_id);
-    $query2->execute();
+    $sql1 = "SELECT * FROM `taken` WHERE lijst_id = :lijst_id";
+    $query1 = $conn->prepare($sql1);
+    $query1->bindParam(":lijst_id", $lijst_id);
+    $query1->execute();
 
-    $result2 = $query2->fetchAll();
-
-
+    $result1 = $query1->fetchAll();
 ?>
 
 <h1 class="title"><?php echo $result['lijst_naam'] ?> <i style="color: #36e336;" class="far fa-check-square"></i></h1>
@@ -27,16 +25,19 @@
             <tr>
                 <th scope="col">Taken</th>
                 <th scope="col">Status</th>
+                <th scope="col">Benodigde tijd</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <?php
                 // Looped alle lijsten die in de database zitten
-                foreach ($result2 as $row) {
+                foreach ($result1 as $row) {
             ?>
                 <tr>
-                    <td><?php echo $row[''] ?></td>
+                    <td><?php echo $row['taak_naam'] ?></td>
+                    <td><?php echo $row['taak_status'] ?></td>
+                    <td><?php echo $row['taak_tijd'] ?></td>
                     <td>
                         <a class="btn btn-danger float-right" href="actions/deleteTaak.php?taak_id=<?php echo $row['taak_id'] ?>" onclick="return taakValidation()"><i class="far fa-trash-alt"></i></a>
                         <a class="btn btn-warning float-right" href="editTaak.php?taak_id=<?php echo $row['taak_id'] ?>"><i class="far fa-edit"></i></a>
