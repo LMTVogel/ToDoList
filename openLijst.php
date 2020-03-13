@@ -16,10 +16,11 @@
 
     $result1 = $query1->fetchAll();
 ?>
-
-<h1 class="title"><?php echo $result['lijst_naam'] ?> <i style="color: #36e336;" class="far fa-check-square"></i></h1>
-
 <div class="container">
+
+    <a href="index.php"><i class="far fa-arrow-alt-circle-left"></i></a>
+    <h1 class="title"><?php echo $result['lijst_naam'] ?> <i style="color: #36e336;" class="far fa-check-square"></i></h1>
+
     <table class="table table-dark">
         <thead>
             <tr>
@@ -51,3 +52,5 @@
         <a class="btn btn-success" href="createTaak.php">Taak toevoegen +</a>
     </div>
 </div>
+
+<?php include 'includes/footer.php' ?>

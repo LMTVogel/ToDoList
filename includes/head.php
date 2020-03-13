@@ -17,24 +17,5 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/6e218605e4.js" crossorigin="anonymous"></script>
     <title>ToDoList</title>
-    <script>
-        function validation() {
-            if (!confirm("Weet u zeker dat u de lijst en bijbehorende taken wilt verwijderen?")) {
-                return false;
-            } else {
-                alert("De lijst en bijbehorende taken zijn verwijderd.");
-                return true;
-            }
-        }
-
-        function taakValidation() {
-            if (!confirm("Weet u zeker dat u de taak wilt verwijderen?")) {
-                return false;
-            } else {
-                alert("De taak is verwijderd.");
-                return true;
-            }
-        }
-    </script>
 </head>
 <body>

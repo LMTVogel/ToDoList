@@ -28,6 +28,12 @@ body {
     margin-right: 15px;
 }
 
+.fa-arrow-alt-circle-left {
+    color: white;
+    font-size: 45px;
+    float: left;
+}
+
 /* FORM STYLING */
 
 .form-group {
