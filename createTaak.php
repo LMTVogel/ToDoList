@@ -1,9 +1,13 @@
-<?php include "includes/head.php" ?>
+<?php include "includes/head.php"; 
+
+    $lijst_id = $_GET['lijst_id'];
+
+?>
 
 <h1 class="title">Nieuwe taak aanmaken <i style="color: #36e336;" class="far fa-check-square"></i></h1>
 
 <div class="container">
-    <form action="actions/addTaak.php" method="POST">
+    <form action="actions/addTaak.php?lijst_id=<?php echo $lijst_id ?>" method="POST">
         <div class="form-group">
             <label for="taak_naam">Taaknaam:</label>
             <input type="text" class="form-control" name="taak_naam">

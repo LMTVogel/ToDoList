@@ -15,6 +15,8 @@
     $query1->execute();
 
     $result1 = $query1->fetchAll();
+
+    var_dump($result1);
 ?>
 <div class="container">
 
@@ -49,7 +51,7 @@
         </tbody>
     </table>
     <div class="text-center">
-        <a class="btn btn-success" href="createTaak.php">Taak toevoegen +</a>
+        <a class="btn btn-success" href="createTaak.php?lijst_id=<?php echo $result['lijst_id'] ?>">Taak toevoegen +</a>
     </div>
 </div>
 
