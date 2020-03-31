@@ -16,4 +16,4 @@
     $query->bindParam(":lijst_id", $lijst_id);
     $query->execute();
 
-    header('location: ../openLijst.php?lijst_id'. $lijst_id);
+    header('location: ../index.php?lijst_id'. $lijst_id);

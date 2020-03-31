@@ -16,7 +16,6 @@
 
     $result1 = $query1->fetchAll();
 
-    var_dump($result1);
 ?>
 <div class="container">
 
