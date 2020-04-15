@@ -19,12 +19,12 @@
                 <option value="begonnen">Aan begonnen</option>
                 <option value="afgerond">Afgerond</option>
             </select>
-        
-            <label for="taak_tijd">Benodigde tijd voor taak:</label>
-            <input type="text" class="form-control" name="taak_tijd">
-        
+
+            <label for="taak_tijd">Hoeveel minuten heeft u nodig voor deze taak?</label>
+            <input type="number" class="form-control" name="taak_tijd">
+
         </div>
-        
+
         <button type="submit" class="btn btn-primary">Aanmaken</button>
     </form>
 </div>

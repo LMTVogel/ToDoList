@@ -39,11 +39,10 @@
                 <tr>
                     <td><?php echo $row['taak_naam'] ?></td>
                     <td><?php echo $row['taak_status'] ?></td>
-                    <td><?php echo $row['taak_tijd'] ?></td>
+                    <td><?php echo $row['taak_tijd'] ?> minuten</td>
                     <td>
                         <a class="btn btn-danger float-right" href="actions/deleteTaak.php?taak_id=<?php echo $row['taak_id'] ?>" onclick="return taakValidation()"><i class="far fa-trash-alt"></i></a>
                         <a class="btn btn-warning float-right" href="editTaak.php?taak_id=<?php echo $row['taak_id'] ?>"><i class="far fa-edit"></i></a>
-                        <a class="btn btn-watch float-right" href="openTaak.php?taak_id=<?php echo $row['taak_id'] ?>"><i class="far fa-eye"></i></a>
                     </td>
                 </tr>
             <?php } ?>
