@@ -22,6 +22,13 @@
     <a href="index.php"><i class="far fa-arrow-alt-circle-left"></i></a>
     <h1 class="title"><?php echo $result['lijst_naam'] ?> <i style="color: #36e336;" class="far fa-check-square"></i></h1>
 
+    <div id="filterButtons">
+        <button class="btn" onclick="filterList('allen')">Laat allen zien</button>
+        <button class="btn" onclick="filterList('nietBegonnen')">Niet begonnen</button>
+        <button class="btn" onclick="filterList('begonnen')">Begonnen</button>
+        <button class="btn" onclick="filterList('afgerond')">Afgerond</button>
+    </div>
+
     <table class="table table-dark">
         <thead>
             <tr>
@@ -33,10 +40,10 @@
         </thead>
         <tbody>
             <?php
-                // Looped alle lijsten die in de database zitten
+                // Looped alle taken van de lijst die in de database zitten
                 foreach ($result1 as $row) {
             ?>
-                <tr>
+                <tr class="tableRow <?php echo $row['taak_status']?>">
                     <td><?php echo $row['taak_naam'] ?></td>
                     <td><?php echo $row['taak_status'] ?></td>
                     <td><?php echo $row['taak_tijd'] ?> minuten</td>

@@ -17,5 +17,6 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/6e218605e4.js" crossorigin="anonymous"></script>
     <title>ToDoList</title>
+    <script src="js/script.js"></script>
 </head>
 <body>
