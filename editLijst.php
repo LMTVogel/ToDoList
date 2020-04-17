@@ -1,4 +1,6 @@
-<?php include 'includes/head.php'; 
+<?php 
+
+include 'includes/head.php'; 
 
 $lijst_id = $_GET['lijst_id'];
 
@@ -8,6 +10,9 @@ $query->bindParam(":lijst_id", $lijst_id);
 $query->execute();
 
 $result = $query->fetch();
+
+// Sluit connectie met de database
+$conn = null;
 
 ?>
 

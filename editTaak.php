@@ -1,4 +1,6 @@
-<?php include 'includes/head.php';
+<?php 
+
+include 'includes/head.php';
 
 $taak_id = $_GET['taak_id'];
 
@@ -8,6 +10,9 @@ $query->bindParam(":taak_id", $taak_id);
 $query->execute();
 
 $result = $query->fetch();
+
+// Sluit connectie met de database
+$conn = null;
 
 ?>
 

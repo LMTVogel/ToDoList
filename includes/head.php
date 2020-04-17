@@ -6,6 +6,9 @@
     $query->execute();
     
     $result = $query->fetchAll();
+
+    // closing connection 
+    $conn = null;
 ?>
 
 <!DOCTYPE html>

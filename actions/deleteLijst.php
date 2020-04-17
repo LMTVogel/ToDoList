@@ -15,4 +15,7 @@ $query1 = $conn->prepare($sql1);
 $query1->bindParam(":lijst_id", $lijst_id);
 $query1->execute();
 
+// Sluit connectie met de database
+$conn = null;
+
 header('location: ../index.php');

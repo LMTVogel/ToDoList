@@ -14,7 +14,6 @@ function filterList(status){
             tableRows[i].style.display = 'none';
         }
     }
-
     //Nu word er door alle rijen heen geloopt die gelijk zijn aan 'y' er word bij elke rij dispay 'table-row' toegevoegd
     for(var j = 0; j < statusRow.length; j++){
         statusRow[j].style.display = 'table-row'

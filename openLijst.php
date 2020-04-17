@@ -1,20 +1,25 @@
-<?php include "includes/head.php";
+<?php 
 
-    $lijst_id = $_GET['lijst_id'];
+include "includes/head.php";
 
-    $sql = "SELECT * FROM `lijsten` WHERE lijst_id = :lijst_id";
-    $query = $conn->prepare($sql);
-    $query->bindParam(":lijst_id", $lijst_id);
-    $query->execute();
+$lijst_id = $_GET['lijst_id'];
 
-    $result = $query->fetch();
+$sql = "SELECT * FROM `lijsten` WHERE lijst_id = :lijst_id";
+$query = $conn->prepare($sql);
+$query->bindParam(":lijst_id", $lijst_id);
+$query->execute();
 
-    $sql1 = "SELECT * FROM `taken` WHERE lijst_id = :lijst_id";
-    $query1 = $conn->prepare($sql1);
-    $query1->bindParam(":lijst_id", $lijst_id);
-    $query1->execute();
+$result = $query->fetch();
 
-    $result1 = $query1->fetchAll();
+$sql1 = "SELECT * FROM `taken` WHERE lijst_id = :lijst_id";
+$query1 = $conn->prepare($sql1);
+$query1->bindParam(":lijst_id", $lijst_id);
+$query1->execute();
+
+$result1 = $query1->fetchAll();
+
+// Sluit connectie met de database
+$conn = null;
 
 ?>
 <div class="container">

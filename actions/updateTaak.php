@@ -17,4 +17,7 @@ $query->bindParam(':taak_status', $taak_status);
 $query->bindParam(':taak_tijd', $taak_tijd);
 $query->execute();
 
+// Sluit connectie met de database
+$conn = null;
+
 header('location: ../openLijst.php?lijst_id=' . $lijst_id);

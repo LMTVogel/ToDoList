@@ -9,4 +9,7 @@ $query = $conn->prepare($sql);
 $query->bindParam(":taak_id", $taak_id);
 $query->execute();
 
+// Sluit connectie met de database
+$conn = null;
+
 header('location: ../index.php');
