@@ -3,12 +3,12 @@
 include 'includes/head.php'; 
 
 $lijst_id = $_GET['lijst_id'];
-
+/* Hier pakt de code de lijst uit de database door middel van de lijst_id */
 $sql = "SELECT * FROM `lijsten` WHERE lijst_id = :lijst_id";
 $query = $conn->prepare($sql);
 $query->bindParam(":lijst_id", $lijst_id);
 $query->execute();
-
+/* Het resultaat wordt uit de database gefetchd */
 $result = $query->fetch();
 
 // Sluit connectie met de database

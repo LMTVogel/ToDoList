@@ -3,22 +3,22 @@
 include "includes/head.php";
 
 $lijst_id = $_GET['lijst_id'];
-
+/* Hier pakt de code de lijsten uit de database door middel van de lijst_id */
 $sql = "SELECT * FROM `lijsten` WHERE lijst_id = :lijst_id";
 $query = $conn->prepare($sql);
 $query->bindParam(":lijst_id", $lijst_id);
 $query->execute();
-
+/* Het resultaat wordt uit de database gefetchd */
 $result = $query->fetch();
-
+/* Hier pakt de code de taken die bij de juiste lijst_id horen */
 $sql1 = "SELECT * FROM `taken` WHERE lijst_id = :lijst_id";
 $query1 = $conn->prepare($sql1);
 $query1->bindParam(":lijst_id", $lijst_id);
 $query1->execute();
-
+/* Het resultaat wordt uit de database gefetchd */
 $result1 = $query1->fetchAll();
 
-// Sluit connectie met de database
+/* Sluit connectie met de database */
 $conn = null;
 
 ?>
@@ -45,7 +45,7 @@ $conn = null;
         </thead>
         <tbody>
             <?php
-                // Looped alle taken van de lijst die in de database zitten
+                /* Looped alle taken van de lijst die in de database zitten */
                 foreach ($result1 as $row) {
             ?>
                 <tr class="tableRow <?php echo $row['taak_status']?>">

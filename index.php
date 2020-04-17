@@ -12,7 +12,7 @@
         </thead>
         <tbody>
             <?php
-                // Looped alle lijsten die in de database zitten
+                /* Looped alle lijsten die in de database zitten */
                 foreach ($result as $row) {
             ?>
                 <tr>

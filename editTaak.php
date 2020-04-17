@@ -3,15 +3,15 @@
 include 'includes/head.php';
 
 $taak_id = $_GET['taak_id'];
-
+/* Hier pakt de code de taak uit de database door middel van de taak_id */
 $sql = "SELECT * FROM `taken` WHERE taak_id = :taak_id";
 $query = $conn->prepare($sql);
 $query->bindParam(":taak_id", $taak_id);
 $query->execute();
-
+/* Het resultaat wordt uit de database gefetchd */
 $result = $query->fetch();
 
-// Sluit connectie met de database
+/* Sluit connectie met de database */
 $conn = null;
 
 ?>
