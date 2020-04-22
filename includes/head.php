@@ -1,14 +1,6 @@
 <?php
-include "connect.php";
-/* Hier pakt de code alle data uit de table 'lijsten' */
-$sql = "SELECT * FROM `lijsten`";
-$query = $conn->prepare($sql);
-$query->execute();
-/* Het resultaat wordt uit de database gefetchd */
-$result = $query->fetchAll();
-
-// closing connection 
-$conn = null;
+require "connect.php";
+require "getLists.php";
 /* De header zorgt ervoor dat de juiste character set wordt ingeladen */
 header('Content-type: text/html; charset=iso-8859-1');
 ?>
