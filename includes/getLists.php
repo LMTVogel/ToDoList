@@ -6,6 +6,3 @@ $query = $conn->prepare($sql);
 $query->execute();
 /* Het resultaat wordt uit de database gefetchd */
 $result = $query->fetchAll();
-
-// closing connection 
-$conn = null;
