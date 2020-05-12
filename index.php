@@ -1,5 +1,8 @@
 <?php 
 
+require "includes/connect.php";
+require "includes/getLists.php";
+
 include "includes/head.php" 
 
 ?>
