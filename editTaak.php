@@ -1,6 +1,7 @@
 <?php 
 
-include 'includes/head.php';
+require "includes/connect.php";
+require "includes/getLists.php";
 
 $taak_id = $_GET['taak_id'];
 /* Hier pakt de code de taak uit de database door middel van de taak_id */
@@ -13,6 +14,8 @@ $result = $query->fetch();
 
 /* Sluit connectie met de database */
 $conn = null;
+
+include 'includes/head.php';
 
 ?>
 

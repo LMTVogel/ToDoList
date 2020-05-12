@@ -1,6 +1,11 @@
-<?php include "includes/head.php"; 
+<?php 
 
-    $lijst_id = $_GET['lijst_id'];
+require "includes/connect.php";
+require "includes/getLists.php";
+
+$lijst_id = $_GET['lijst_id'];
+
+include "includes/head.php"; 
 
 ?>
 

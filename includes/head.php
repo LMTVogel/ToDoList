@@ -1,7 +1,4 @@
 <?php
-require "connect.php";
-require "getLists.php";
-/* De header zorgt ervoor dat de juiste character set wordt ingeladen */
 header('Content-type: text/html; charset=iso-8859-1');
 ?>
 

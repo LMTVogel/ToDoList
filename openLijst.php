@@ -1,6 +1,7 @@
 <?php 
 
-include "includes/head.php";
+require "includes/connect.php";
+require "includes/getLists.php";
 
 $lijst_id = $_GET['lijst_id'];
 /* Hier pakt de code de lijsten uit de database door middel van de lijst_id */
@@ -20,6 +21,8 @@ $result1 = $query1->fetchAll();
 
 /* Sluit connectie met de database */
 $conn = null;
+
+include "includes/head.php";
 
 ?>
 <div class="container">

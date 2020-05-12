@@ -1,4 +1,11 @@
-<?php include "includes/head.php" ?>
+<?php 
+
+require "includes/connect.php";
+require "includes/getLists.php";
+
+include "includes/head.php";
+
+?>
 
 <h1 class="title">Luuk's To Do List <i style="color: #36e336;" class="far fa-check-square"></i></h1>
 
