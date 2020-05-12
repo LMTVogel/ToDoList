@@ -11,5 +11,7 @@ $query->execute();
 
 /* Sluit connectie met de database */
 $conn = null;
+
 /* Na de actie wordt de gebruiker doorbegeleid naar index.php */
+
 header('location: ../index.php');
